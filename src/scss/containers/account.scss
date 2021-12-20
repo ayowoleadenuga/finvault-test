@@ -1,0 +1,410 @@
+.white-bg {
+  @include themify($themes) {
+    background: themed("colorBackgroundBody");
+  }
+}
+.other-bg {
+  background: #f8fafb;
+}
+.cardbox {
+  background: #ffffff;
+  border: 1px solid #deebfe;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 26px rgba(20, 60, 95, 0.04);
+  border-radius: 20px;
+  width: 100%;
+  height: 160px;
+  padding: 20px;
+  margin-bottom: 15px;
+  .symbol {
+    background: rgba(27, 243, 164, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    h5 {
+      color: #17ec9d;
+      margin: auto;
+      font-weight: bolder;
+    }
+  }
+  .valueContainer {
+    margin: auto;
+    margin-left: 15px;
+    .title {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.05em;
+      color: #718caf;
+    }
+    .value {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 29px;
+      display: flex;
+      align-items: center;
+      color: #07172f;
+      margin-top: 0;
+    }
+  }
+}
+.account {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: auto;
+
+  // .bckgrndImg {
+  //   height: 100vh;
+  //   width: 50vw;
+  //   background: url(../../shared/img/login_half.png) no-repeat center center fixed;
+  //   -webkit-background-size: cover;
+  //   -moz-background-size: cover;
+  //   -o-background-size: cover;
+  //   background-size: cover;
+  // }
+
+  &.account--photo {
+    // background: url(../shared/img/404/bg_404.png) no-repeat center;
+    background-size: cover;
+
+    .account__card {
+      background-color: rgba(0, 10, 16, 0.8);
+      color: #ffffff;
+    }
+
+    .form__form-group-icon,
+    .form__form-group-button {
+      background: transparent;
+    }
+
+    .form__form-group-icon,
+    input:not(:last-child) {
+      border-right: none;
+    }
+
+    .form__form-group-button,
+    input {
+      border-left: none;
+    }
+
+    .form__form-group-button.active {
+      border-color: #eff1f5;
+
+      svg {
+        fill: $color-accent;
+      }
+    }
+
+    input {
+      color: #ffffff;
+
+      &:focus {
+        border-color: #eff1f5;
+      }
+    }
+
+    p {
+      color: #ffffff;
+    }
+
+    .account__title {
+      color: #ffffff;
+    }
+  }
+}
+.account__wrapper {
+  display: flex;
+  height: 100vh;
+  background: #f8fafb !important;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+  .logoGroup {
+    text-align: center;
+    img {
+      width: 20%;
+    }
+  }
+
+  .pageDir {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p {
+      text-align: center;
+    }
+    .pageNum {
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      letter-spacing: 0.2px;
+      span {
+        color: $color-blue;
+        font-weight: bold;
+      }
+    }
+    .pointers {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      .purple {
+        background: $color-blue;
+      }
+      .hidden {
+        display: none;
+      }
+      .ash {
+        background: rgb(226, 220, 220);
+      }
+      .circle {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+      }
+      .line {
+        width: 100px;
+        height: 1px;
+      }
+    }
+  }
+}
+
+.account__card {
+  @include themify($themes) {
+    background-color: themed("colorBackground");
+  }
+
+  background-color: #ffffff;
+  padding: 50px 60px;
+  max-width: 520px;
+  width: 100%;
+}
+
+.account__wrapper1 {
+  display: flex;
+  height: 100vh;
+  width: 50vw;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.account__card1 {
+  @include themify($themes) {
+    background-color: themed("colorBackground");
+  }
+  background-color: #ffffff;
+  width: 60%;
+  margin: auto;
+}
+
+.account__profile {
+  text-align: center;
+}
+
+.account__btns {
+  display: flex;
+  width: calc(100% + 10px);
+  margin: -10px 0 -20px -10px;
+
+  a {
+    margin: 10px 0 20px 10px;
+    white-space: nowrap;
+  }
+}
+
+.account__btn {
+  width: 100%;
+  margin-right: 0;
+}
+
+.account__avatar {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.account__name {
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 15px;
+  margin-top: 5px;
+}
+
+.account__sub {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: $color-additional;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+.account__forgot-password {
+  position: absolute;
+  font-size: 11px;
+  line-height: 15px;
+  bottom: -18px;
+  right: 0;
+
+  a {
+    color: $color-blue;
+
+    &:hover {
+      color: $color-blue-hover;
+      text-decoration: none;
+    }
+  }
+}
+
+.form__form-group--forgot {
+  margin-bottom: 40px;
+}
+
+.account__or {
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: "";
+    height: 1px;
+    width: calc(50% - 90px);
+    background: #dddddd;
+    position: absolute;
+    top: 10px;
+  }
+
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+}
+
+.account__social {
+  text-align: center;
+}
+
+.account__social-btn {
+  display: inline-block;
+  height: 38px;
+  width: 38px;
+  border-radius: 5px;
+  padding: 9px;
+  margin-right: 10px;
+  transition: all 0.3s;
+  border: none;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  svg {
+    fill: #ffffff;
+    height: 20px;
+    width: 20px;
+  }
+
+  &.account__social-btn--facebook {
+    background: #4766a4;
+
+    &:hover {
+      background: darken(#4766a4, 10%);
+    }
+  }
+
+  &.account__social-btn--google {
+    background: #c74d4d;
+
+    &:hover {
+      background: darken(#c74d4d, 10%);
+    }
+  }
+}
+
+.account__head {
+  margin-bottom: 30px;
+  h3 {
+    color: #2e384d;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  p {
+    margin-top: 0;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22px;
+    color: #8798ad !important;
+  }
+}
+
+.account__logo {
+  font-weight: 700;
+}
+
+.account__logo-accent {
+  color: $color-blue;
+}
+
+.account__have-account {
+  text-align: center;
+  margin-top: 20px;
+
+  a {
+    color: $color-blue;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $color-blue-hover;
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .bckgrndImg {
+    display: none;
+  }
+  .account__wrapper1 {
+    width: 100vw;
+  }
+  .forgotP {
+    font-size: 10px;
+  }
+  .account__card {
+    padding: 35px 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .bckgrndImg {
+    display: none;
+  }
+  .account__btns {
+    flex-wrap: wrap;
+  }
+}
