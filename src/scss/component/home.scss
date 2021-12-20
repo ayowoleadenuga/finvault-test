@@ -1,0 +1,27 @@
+.home {
+  padding-top: 15px;
+  .sub_header {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    color: #718caf;
+  }
+  .header {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    color: #07172f;
+  }
+  .hr-line {
+    border-bottom: 1px solid #d3e7ff;
+    width: 100%;
+    margin: 30px auto;
+  }
+}
